@@ -63,7 +63,6 @@ public class CatHttp {
                 .setSocketTimeout(30000)    // максимальное время ожидания получения данных
                 .setRedirectsEnabled(false) // возможность следовать редиректу в ответе
                 .build();
-        CloseableHttpClient httpClient = HttpClientBuilder.create().setDefaultRequestConfig(requestConfig).build();
-        return httpClient;
+        return HttpClientBuilder.create().setDefaultRequestConfig(requestConfig).build();
     }
 }
